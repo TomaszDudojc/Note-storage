@@ -7,6 +7,8 @@ import Preferences from '../Preferences/Preferences';
 import useToken from './useToken';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import CreateArea from "../CreateArea/CreateArea";
+import Note from "../Note/Note";
 
 function App() {
   const { token, setToken } = useToken();
@@ -23,6 +25,9 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+      <CreateArea />
+      <Note time="data" title="tytulik"content="treść..." />
+      <Note time="czas" title="2 notatka"content="jej treść..." />
       <BrowserRouter>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />           
