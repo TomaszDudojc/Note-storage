@@ -31,10 +31,10 @@ export default function Login({ setToken }) {
       <form className="form" onSubmit={handleSubmit}>
         <p className="note h1">Please Log In or Register</p>
                 
-        <input type="email" name="email" placeholder="Email" onChange={e => setEmail(e.target.value)} /> 
-        <input type="password" name="name" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+        <input type="email" name="email" placeholder="Email" onChange={e => setEmail(e.target.value)} required/> 
+        <input type="password" name="name" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>
        
-        <button disabled={!(email && password)} type="submit">Login</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
