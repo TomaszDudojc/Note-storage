@@ -8,7 +8,7 @@ function CreateArea(props) {
   const [alert, setAlert] = useState(false);
   const now = new Date().toLocaleString();
   const [time, setTime] = useState(now); 
-  const mounted = useRef(true);
+  const mounted = useRef(true); 
 
   setInterval(updateTime, 1000);  
   
@@ -38,10 +38,11 @@ function CreateArea(props) {
         }
       })
   };
+  
 
   return (
     <div>
-      <form className="create-note" onSubmit={handleSubmit}>
+      <form className="create-note" onSubmit={handleSubmit}>        
         <input name="time" onChange={e => setTime(e.target.value)} value={time} disabled/>
         <input name="title" onChange={e => setTitle(e.target.value)} value={title} placeholder="Title" required/>
         <textarea name="content" onChange={e => setContent(e.target.value)} value={content} placeholder="Take a note..." rows="3" required/>

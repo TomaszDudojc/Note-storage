@@ -10,11 +10,12 @@ import Footer from "../Footer/Footer";
 import CreateArea from "../CreateArea/CreateArea";
 import Note from "../Note/Note";
 import { getNotes } from '../../services/notes';
+import { deleteItem } from '../../services/notes';
 
 function App() {
   const { token, setToken } = useToken();
   const [notes, setNotes] = useState([]);
-  const mounted = useRef(true);   
+  const mounted = useRef(true);  
 
   useEffect(() => {
     mounted.current = true;    
@@ -28,7 +29,11 @@ function App() {
         }
       })
       return () => mounted.current = false;
-  }, [alert, notes])  
+  }, [alert, notes])
+
+  function deleteNote(id) { 
+    deleteItem(id);    
+  }
  
   if(!token) {
     return (
@@ -42,8 +47,8 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      <CreateArea />      
-      {notes.map(item => <Note key={item.id} time={item.time} title={item.title} content={item.content} />)}
+      <CreateArea /> 
+      {notes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
       <BrowserRouter>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />           

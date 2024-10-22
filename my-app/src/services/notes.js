@@ -9,7 +9,14 @@ export function setItem(time, title, content) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ time, title, content})
+      body: JSON.stringify({time, title, content})
+    })
+      .then(data => data.json())
+  }
+
+  export function deleteItem(id) {       
+    return fetch('http://localhost:3333/notes/'+id, {
+      method: 'DELETE'
     })
       .then(data => data.json())
   }
