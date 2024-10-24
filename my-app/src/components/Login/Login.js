@@ -29,11 +29,9 @@ export default function Login({ setToken }) {
   return(
     <div>      
       <form className="form" onSubmit={handleSubmit}>
-        <p className="note h1">Please Log In or Register</p>
-                
+        <p className="note h1">Please Log In or Register</p>                
         <input type="email" name="email" placeholder="Email" onChange={e => setEmail(e.target.value)} required/> 
-        <input type="password" name="name" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>
-       
+        <input type="password" name="name" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>       
         <button type="submit">Login</button>
       </form>
     </div>

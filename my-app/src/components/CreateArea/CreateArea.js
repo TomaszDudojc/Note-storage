@@ -2,7 +2,7 @@ import React, { useState , useRef, useEffect} from "react";
 import { setItem } from '../../services/notes';
 
 
-function CreateArea(props) {  
+function CreateArea() {  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState(""); 
   const [alert, setAlert] = useState(false);
