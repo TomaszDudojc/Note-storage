@@ -7,6 +7,8 @@ import SettingsPowerIcon from '@mui/icons-material/SettingsPower';
 
 import { getId } from "../Login/Login";
 //import { getEmail } from "../Login/Login";
+import Login from '../Login/Login';
+import useToken from '../App/useToken';
 
 function Home() {  
   const [notes, setNotes] = useState([]);
@@ -14,6 +16,7 @@ function Home() {
   const [email, setEmail] = useState([]);
   const mounted = useRef(true);
   //const email = getEmail();
+  const { token, setToken } = useToken();
     
   const id = getId();
   const userNotes = notes.filter(function(item) {
@@ -71,12 +74,18 @@ useEffect(() => {
   }, [alert, notes])  
 
   function deleteNote(id) { 
-    deleteItem(id);    
+    deleteItem(id);   
+  }
+
+  function handleLogout(){
+    setToken(false);
+    window.location.reload();   
+   
   }
   
   return (
     <div>
-    <h1 ><SettingsPowerIcon style={{fontWeight: 700, fontSize: "72px", color: "#fff"}}/></h1>
+    <button className="loginButton" onClick={handleLogout}><SettingsPowerIcon style={{fontWeight: 700, fontSize: "72px"}}/></button>    
     <CreateArea userId={id}/>
 {/*
     {notes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
