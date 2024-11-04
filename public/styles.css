@@ -176,7 +176,8 @@ form.create-note button {
 
 .buttonAdd:hover,
 .form button:hover,
-.loginButton:hover{
+.loginButton:hover,
+.logoutButton:hover {
   background: #fff;
   color: #487eb0;
   border: 1px solid #487eb0;
@@ -201,4 +202,19 @@ form.create-note button {
   width: 480px;
   padding: 15px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+  font-size: 24px;
+}
+
+.logoutButton {
+  position: fixed;
+	right: 20px;
+  background: #487eb0;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;  
 }

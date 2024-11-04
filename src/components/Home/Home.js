@@ -3,11 +3,10 @@ import CreateArea from "../CreateArea/CreateArea";
 import Note from "../Note/Note";
 import { getNotes } from '../../services/notes';
 import { deleteItem } from '../../services/notes';
-import SettingsPowerIcon from '@mui/icons-material/SettingsPower';
 
 import { getId } from "../Login/Login";
 //import { getEmail } from "../Login/Login";
-import Login from '../Login/Login';
+//import Login from '../Login/Login';
 import useToken from '../App/useToken';
 
 function Home() {  
@@ -84,8 +83,7 @@ useEffect(() => {
   }
   
   return (
-    <div>
-    <button className="loginButton" onClick={handleLogout}><SettingsPowerIcon style={{fontWeight: 700, fontSize: "72px"}}/></button>    
+    <div>        
     <CreateArea userId={id}/>
 {/*
     {notes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}

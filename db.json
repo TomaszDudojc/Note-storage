@@ -81,58 +81,8 @@
       "password": "123"
     },
     {
-      "id": "601a",
+      "id": "87e3",
       "email": "tom1@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "0439",
-      "email": "tom123@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "bec7",
-      "email": "tom8@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "0e21",
-      "email": "tom22@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "2f85",
-      "email": "tom33@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "7d70",
-      "email": "tom66@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "0ed3",
-      "email": "tom0@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "9d01",
-      "email": "tom77@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "a760",
-      "email": "tom90@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "a916",
-      "email": "tom54@gmail.com",
-      "password": "111"
-    },
-    {
-      "id": "ba35",
-      "email": "tomek@gmail.com",
       "password": "111"
     }
   ]

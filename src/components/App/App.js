@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header isLogged="true"/>
       {/*
       <CreateArea /> 
       {notes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
