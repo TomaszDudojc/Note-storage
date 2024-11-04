@@ -6,13 +6,14 @@ import { Fab } from "@mui/material";
 import { Zoom } from "@mui/material";
 
 
-function CreateArea() {  
+function CreateArea(props) {  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState(""); 
   const [alert, setAlert] = useState(false);
   const now = new Date().toLocaleString();
   const [time, setTime] = useState(now); 
   const mounted = useRef(true);
+  const userId = props.userId;
 
   const [isExpanded, setExpanded] = useState(false);
 
@@ -35,7 +36,7 @@ function CreateArea() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    setItem(time, title, content)
+    setItem(userId, time, title, content)
       .then(() => {
         if(mounted.current) {       
           setTitle('');
