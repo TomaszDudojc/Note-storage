@@ -1,89 +1,63 @@
 {
   "notes": [
     {
-      "id": "b73d",
+      "id": "b86d",
       "userId": "1",
-      "time": "1.11.2024, 22:49:45",
-      "title": "not 1",
-      "content": "1 dla id1"
+      "time": "5.11.2024, 16:11:55",
+      "title": "note 1",
+      "content": "by user id1"
     },
     {
-      "id": "4321",
-      "userId": "1",
-      "time": "1.11.2024, 22:49:59",
-      "title": "2",
-      "content": "2 dla id 1"
-    },
-    {
-      "id": "1fa1",
-      "userId": "1",
-      "time": "1.11.2024, 22:50:13",
-      "title": "3",
-      "content": "3 dla id 1"
-    },
-    {
-      "id": "b72f",
+      "id": "6d0c",
       "userId": "2",
-      "time": "1.11.2024, 22:53:54",
-      "title": "nataka id 2",
-      "content": "1 dla uzyt 2"
+      "time": "5.11.2024, 16:14:22",
+      "title": "note 1",
+      "content": "by user id2"
     },
     {
-      "id": "b111",
+      "id": "a9c2",
       "userId": "2",
-      "time": "1.11.2024, 22:54:15",
-      "title": "id 2",
-      "content": "2 dla id 2"
+      "time": "5.11.2024, 16:14:41",
+      "title": "note 2",
+      "content": "by user id2"
     },
     {
-      "id": "1b9e",
-      "userId": "2",
-      "time": "1.11.2024, 22:54:31",
-      "title": "3 id 2",
-      "content": "3 dla id 2"
-    },
-    {
-      "id": "4d7f",
+      "id": "9fdb",
       "userId": "3",
-      "time": "1.11.2024, 22:55:10",
-      "title": "id 3",
-      "content": "1 dla id 3"
+      "time": "5.11.2024, 16:15:28",
+      "title": "note 1",
+      "content": "by user id3"
     },
     {
-      "id": "c885",
+      "id": "060c",
       "userId": "3",
-      "time": "1.11.2024, 22:55:23",
-      "title": "2",
-      "content": "2 dla id 3"
+      "time": "5.11.2024, 16:15:54",
+      "title": "note 2",
+      "content": "by user id3"
     },
     {
-      "id": "7625",
-      "userId": "2",
-      "time": "1.11.2024, 23:10:24",
-      "title": "4 id 2",
-      "content": "4 dla id2"
+      "id": "3b9a",
+      "userId": "3",
+      "time": "5.11.2024, 16:16:13",
+      "title": "note 3",
+      "content": "by user id3"
     }
   ],
   "users": [
     {
       "id": "1",
-      "email": "ola@gmail.com",
-      "password": "111"
+      "email": "ada@gmail.com",
+      "hashedPassword": "$2a$10$wALgMyysuRMopf.IS1qccuE1o/MDZwNJrFL/xEguwE0ywlDdQXrXq"
     },
     {
       "id": "2",
-      "email": "tom@gmail.com",
-      "password": "111"
+      "email": "ola@gmail.com",
+      "hashedPassword": "$2a$10$ngigXORfJ8Njhq6ceSXMJOXW7KADSkbOid8ngjyIuS94rE7UPqV8O"
     },
     {
       "id": "3",
-      "email": "ada@mail",
-      "password": "123"
-    },
-    {
-      "id": "87e3",
-      "email": "tom1@gmail.com",
-      "password": "111"
+      "email": "tomek@gmail.com",
+      "hashedPassword": "$2a$10$iYWtwGX4bMLCmUdTZL9ZfOCHbM1V0LoypdYp2Hi0XLH8mrBYtlwWa"
     }
   ]
 }

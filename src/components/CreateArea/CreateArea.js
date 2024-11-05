@@ -1,10 +1,8 @@
 import React, { useState , useRef, useEffect} from "react";
 import { setItem } from '../../services/notes';
-
 import AddIcon from "@mui/icons-material/Add";
 import { Fab } from "@mui/material";
 import { Zoom } from "@mui/material";
-
 
 function CreateArea(props) {  
   const [title, setTitle] = useState("");
@@ -63,7 +61,6 @@ function CreateArea(props) {
               <AddIcon />
             </Fab>
         </Zoom>
-          {/*<button type="submit">Add</button>*/}
       </form>
       {alert && <h3 className="info"> Note added 🖋</h3>}
     </div>        

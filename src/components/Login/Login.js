@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-//import PropTypes from 'prop-types';
-//import './Login.css';
 import { setUser } from '../../services/users';
 import { getUsers } from '../../services/users';
-//import { redirect } from 'react-router-dom';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import MailLockIcon from '@mui/icons-material/MailLock';
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
+import bcrypt from 'bcryptjs';
 
 async function loginUser(credentials) {
  return fetch('http://localhost:8080/login', {
@@ -21,14 +19,14 @@ async function loginUser(credentials) {
 
 export default function Login({ setToken }) {
   const [email, setEmail] = useState();
-  const [password, setPassword] = useState();  
-
+  const [password, setPassword] = useState();
   const [alertPassword, setAlertPassword] = useState(false);
   const [alertEmail, setAlertEmail] = useState(false);
   const [alertEmailTaken, setAlertEmailTaken] = useState(false);
   const [alertRegistred, setAlertRegistred] = useState(false);
   const [users, setUsers] = useState([]);
-  const mounted = useRef(true);  
+  const mounted = useRef(true);
+  const salt = bcrypt.genSaltSync(10);  
 
   useEffect(() => {
     if(alertPassword) {
@@ -70,7 +68,6 @@ export default function Login({ setToken }) {
     }
   }, [alertRegistred])
 
-
   useEffect(() => {
     mounted.current = true;    
     if(users.length && !alertRegistred) {
@@ -84,12 +81,10 @@ export default function Login({ setToken }) {
       })
       return () => mounted.current = false;
   }, [alertRegistred, users])
-
  
-
   function findUser(email) { 
     const findedUser = users.find((user) => user.email == email);
-    return findedUser;      
+    return (findedUser);      
   }
 
   const handleLogin = async e => {
@@ -101,8 +96,8 @@ export default function Login({ setToken }) {
 
     const findedUser = findUser(email);
     if(findedUser) {
-      if (password== findedUser.password){
-        //getId(findedUser);
+      if (bcrypt.compareSync(password, findedUser.hashedPassword)) {        
+        getId(findedUser);
         getEmail(email);        
         setToken(token);        
       }
@@ -121,13 +116,14 @@ export default function Login({ setToken }) {
     if(findUser(email)){
       setAlertEmailTaken(true);
     }
-    else{      
-      setUser(email, password)
+    else {
+      const hashedPassword = bcrypt.hashSync(password, salt);      
+      setUser(email, hashedPassword)
       .then(() => {
         if(mounted.current) {       
           //setEmail('');
           //setPassword('');
-          setRegiserForm(false);
+          setRegisterForm(false);
           setLoginForm(true);                  
           setAlertRegistred(true);         
         }
@@ -135,16 +131,16 @@ export default function Login({ setToken }) {
     }
   }
 
-  const [showedRegisterForm, setRegiserForm] = useState(false); 
+  const [showedRegisterForm, setRegisterForm] = useState(false); 
   function showRegisterForm(){
-    setRegiserForm(!showedRegisterForm);
+    setRegisterForm(!showedRegisterForm);
     setLoginForm(false);
   }
   
   const [showedLoginForm, setLoginForm] = useState(false); 
   function showLoginForm(){
     setLoginForm(!showedLoginForm);
-    setRegiserForm(false);
+    setRegisterForm(false);
   }
 
   return(
@@ -170,20 +166,20 @@ export default function Login({ setToken }) {
       </form>}
       </div>
       {alertEmailTaken && <h3 className="info"> Email already taken < MailLockIcon/></h3>}
-      {users.map(user => <p>id: {user.id}, password: {user.password}, email: {user.email}</p> )} 
+      {users.map(user => <p>id: {user.id}, hashedPassword: {user.hashedPassword}, email: {user.email}</p> )} 
     </div>
   ); 
 }
 
 export function getId(findedUser) {       
   //const loggedUserId = findedUser.id;
-  const loggedUserId = "3";
-  //console.log(loggedUserId);
+  const loggedUserId = "2";
+  console.log(loggedUserId);
   return (loggedUserId);
 }
 
 export function getEmail(email) {
-  console.log(email);       
-  return (email);
+  console.log(email);
+  return (email); 
 }
-    
+   

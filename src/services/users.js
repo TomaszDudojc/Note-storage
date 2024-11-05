@@ -4,13 +4,13 @@ export function getUsers() {
   }
 
 
-export function setUser(email, password) {
+export function setUser(email, hashedPassword) {
     return fetch('http://localhost:3333/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({email, password})
+      body: JSON.stringify({email, hashedPassword})
     })
       .then(data => data.json())
   }
