@@ -42,8 +42,9 @@ function Home() {
     <CreateArea userId={id}/>
 
     {userNotes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
-
+    || TYLKO ROBOCZO!: ||
     <p>Logged user id: {id}</p>
+    <p>Logged user email: {email}</p>
     </div>
   );
 }

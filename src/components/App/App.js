@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Header isLogged="true"/>     
+      <Header isLogged="true"/>          
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} /> 

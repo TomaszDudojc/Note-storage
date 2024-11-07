@@ -166,6 +166,7 @@ export default function Login({ setToken }) {
       </form>}
       </div>
       {alertEmailTaken && <h3 className="info"> Email already taken < MailLockIcon/></h3>}
+      || TYLKO ROBOCZO!: ||
       {users.map(user => <p>id: {user.id}, hashedPassword: {user.hashedPassword}, email: {user.email}</p> )} 
     </div>
   ); 
@@ -180,6 +181,7 @@ export function getId(findedUser) {
 
 export function getEmail(email) {
   console.log(email);
-  return (email); 
+  const newEmail='"'+email+'"';
+  return (newEmail);
 }
    

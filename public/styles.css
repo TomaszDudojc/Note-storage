@@ -194,7 +194,7 @@ form.create-note button {
   position: relative;
   background: #487eb0;
   color: #fff;
-  border: none;
+  border: 1px solid #487eb0;
   border-radius: 7px;
   cursor: pointer;
   outline: none;
@@ -206,8 +206,9 @@ form.create-note button {
 }
 
 .logoutButton {
-  position: fixed;
-	right: 20px;
+  /*position: fixed;
+	right: 20px;*/
+  margin-left: 70%; 
   background: #487eb0;
   color: #fff;
   border: none;

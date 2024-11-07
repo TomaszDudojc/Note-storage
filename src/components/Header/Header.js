@@ -1,12 +1,10 @@
 import React from "react";
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import SettingsPowerIcon from '@mui/icons-material/SettingsPower';
-import useToken from '../App/useToken';
 
-function Header(props) {
-  const { token, setToken } = useToken();
-  function handleLogout(){
-    setToken(false);
+function Header(props) {  
+  function handleLogout(){   
+    localStorage.clear();
     window.location.reload();
   }
 
