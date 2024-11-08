@@ -96,9 +96,9 @@ export default function Login({ setToken }) {
 
     const findedUser = findUser(email);
     if(findedUser) {
-      if (bcrypt.compareSync(password, findedUser.hashedPassword)) {        
-        getId(findedUser);
-        getEmail(email);        
+      if (bcrypt.compareSync(password, findedUser.hashedPassword)) {
+        localStorage.setItem('loggedUserEmail', JSON.stringify(email));        
+        localStorage.setItem('loggedUserId', JSON.stringify(findedUser.id));
         setToken(token);        
       }
       else{
@@ -171,17 +171,3 @@ export default function Login({ setToken }) {
     </div>
   ); 
 }
-
-export function getId(findedUser) {       
-  //const loggedUserId = findedUser.id;
-  const loggedUserId = "2";
-  console.log(loggedUserId);
-  return (loggedUserId);
-}
-
-export function getEmail(email) {
-  console.log(email);
-  const newEmail='"'+email+'"';
-  return (newEmail);
-}
-   

@@ -4,18 +4,15 @@ import Note from "../Note/Note";
 import { getNotes } from '../../services/notes';
 import { deleteItem } from '../../services/notes';
 
-import { getId } from "../Login/Login";
-import { getEmail } from "../Login/Login";
-
-
 function Home() {  
   const [notes, setNotes] = useState([]);
-  const mounted = useRef(true);
-  const email = getEmail();
-  const id = getId();
+  const mounted = useRef(true); 
+  const loggedUserEmail = localStorage.getItem('loggedUserEmail');
+  const loggedUserIdString = localStorage.getItem('loggedUserId');  
+  const loggedUserId = JSON.parse(loggedUserIdString);
 
   const userNotes = notes.filter(function(item) {
-    return item.userId==id;
+    return item.userId==loggedUserId;
   });
   
 
@@ -39,12 +36,11 @@ function Home() {
 
   return (
     <div>        
-    <CreateArea userId={id}/>
-
+    <CreateArea userId={loggedUserId}/>
     {userNotes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
     || TYLKO ROBOCZO!: ||
-    <p>Logged user id: {id}</p>
-    <p>Logged user email: {email}</p>
+    <p>Logged user id: {loggedUserId}</p>
+    <p>Logged user email: {loggedUserEmail}</p>
     </div>
   );
 }

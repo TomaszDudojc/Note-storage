@@ -1,4 +1,3 @@
-//import React, { useEffect, useRef, useState } from 'react';
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard';
@@ -10,13 +9,13 @@ import Footer from "../Footer/Footer";
 import Home from "../Home/Home";
 
 function App() {
-  const { token, setToken } = useToken();
+  const { token, setToken } = useToken();  
   
   if(!token) {
     return (
     <div>
       <Header />
-      <Login setToken={setToken} />
+      <Login setToken={setToken}/>
       <Footer />    
     </div>);
   }
