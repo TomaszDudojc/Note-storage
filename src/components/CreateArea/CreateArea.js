@@ -12,6 +12,7 @@ function CreateArea(props) {
   const [time, setTime] = useState(now); 
   const mounted = useRef(true);
   const userId = props.userId;
+  const userEmail = props.userEmail;
 
   const [isExpanded, setExpanded] = useState(false);
 
@@ -32,9 +33,10 @@ function CreateArea(props) {
     }
   }, [alert])
   
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    setItem(userId, time, title, content)
+    setItem(userId, time, title, content, userEmail)
       .then(() => {
         if(mounted.current) {       
           setTitle('');
@@ -62,7 +64,7 @@ function CreateArea(props) {
             </Fab>
         </Zoom>
       </form>
-      {alert && <h3 className="info"> Note added 🖋</h3>}
+      {alert && <h3 className="info"> Note added 🖋 </h3>}
     </div>        
   );
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { setUser } from '../../services/users';
 import { getUsers } from '../../services/users';
+import bcrypt from 'bcryptjs';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import MailLockIcon from '@mui/icons-material/MailLock';
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
-import bcrypt from 'bcryptjs';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 async function loginUser(credentials) {
  return fetch('http://localhost:8080/login', {
@@ -146,7 +148,7 @@ export default function Login({ setToken }) {
   return(
     <div>
       <div className="fromContainer">      
-      <button className="loginButton" onClick={showLoginForm}>Please Login</button>
+      <button className="loginButton" onClick={showLoginForm}><HowToRegIcon /> Please Login</button>
       {showedLoginForm && <form className="form" onSubmit={handleLogin}>                        
         <input type="email" name="email" placeholder="Email" onChange={e => setEmail(e.target.value)} required/> 
         <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>       
@@ -158,16 +160,14 @@ export default function Login({ setToken }) {
       {alertEmail && <h3 className="info"> This email is not registered <MailLockIcon /></h3>}
 
       <div className="fromContainer">
-      <button className="loginButton" onClick={showRegisterForm}>Please Register</button>      
+      <button className="loginButton" onClick={showRegisterForm} ><AppRegistrationIcon /> Please Register</button>      
       {showedRegisterForm && <form className="form" onSubmit={handleRegister}>                        
         <input type="email" name="email" placeholder="Email" onChange={e => setEmail(e.target.value)} required/> 
         <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>       
         <button type="submit">Register</button>
       </form>}
       </div>
-      {alertEmailTaken && <h3 className="info"> Email already taken < MailLockIcon/></h3>}
-      || TYLKO ROBOCZO!: ||
-      {users.map(user => <p>id: {user.id}, hashedPassword: {user.hashedPassword}, email: {user.email}</p> )} 
+      {alertEmailTaken && <h3 className="info"> Email already taken < MailLockIcon/></h3>}      
     </div>
   ); 
 }

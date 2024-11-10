@@ -219,3 +219,10 @@ form.create-note button {
   width: 56px;
   height: 56px;  
 }
+
+.author { 
+  color: grey;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 5px;  
+}

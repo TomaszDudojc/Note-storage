@@ -1,132 +1,64 @@
 {
   "notes": [
     {
-      "id": "b86d",
-      "userId": "1",
-      "time": "5.11.2024, 16:11:55",
+      "id": "455a",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:45:17",
       "title": "note 1",
-      "content": "by user id1"
+      "content": "pierwsza notatka, aby sprawadzić działanie programu, może trochę nudna i przydługa, ale zawsze coś..",
+      "userEmail": "ada@gmail.com"
     },
     {
-      "id": "6d0c",
-      "userId": "2",
-      "time": "5.11.2024, 16:14:22",
-      "title": "note 1",
-      "content": "by user id2"
+      "id": "8d08",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:45:37",
+      "title": "druga ",
+      "content": "adfasfsafsadfsa",
+      "userEmail": "ada@gmail.com"
     },
     {
-      "id": "a9c2",
-      "userId": "2",
-      "time": "5.11.2024, 16:14:41",
-      "title": "note 2",
-      "content": "by user id2"
-    },
-    {
-      "id": "9fdb",
-      "userId": "3",
-      "time": "5.11.2024, 16:15:28",
-      "title": "note 1",
-      "content": "by user id3"
-    },
-    {
-      "id": "060c",
-      "userId": "3",
-      "time": "5.11.2024, 16:15:54",
-      "title": "note 2",
-      "content": "by user id3"
-    },
-    {
-      "id": "3b9a",
-      "userId": "3",
-      "time": "5.11.2024, 16:16:13",
-      "title": "note 3",
-      "content": "by user id3"
-    },
-    {
-      "id": "60b6",
-      "userId": "4696",
-      "time": "8.11.2024, 12:23:18",
-      "title": "2",
-      "content": "djlfaldl dla tomka 1"
-    },
-    {
-      "id": "3388",
-      "userId": "f9a7",
-      "time": "8.11.2024, 12:48:46",
-      "title": "1",
-      "content": "OLA 1 DJALFAJLF ALF JA"
-    },
-    {
-      "id": "7a13",
-      "userId": "f9a7",
-      "time": "8.11.2024, 12:49:06",
-      "title": "FASD",
-      "content": "ADSFASF ola 1"
-    },
-    {
-      "id": "6d8a",
-      "userId": "f9a7",
-      "time": "8.11.2024, 12:49:22",
-      "title": "sdaf",
-      "content": "adfasfas ola1"
-    },
-    {
-      "id": "2a9e",
-      "userId": "f366",
-      "time": "8.11.2024, 13:08:57",
-      "title": "1",
-      "content": "pierwsza ada1"
-    },
-    {
-      "id": "125e",
-      "userId": "f366",
-      "time": "8.11.2024, 13:09:46",
-      "title": "3",
-      "content": "trzecia ada 1\n"
-    },
-    {
-      "id": "ebea",
-      "userId": "f366",
-      "time": "8.11.2024, 13:10:21",
+      "id": "8cd6",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:46:19",
       "title": "4",
-      "content": "czwarta ada1"
+      "content": "dfasf\nfasdfa\nasfdfas\ndfaasd",
+      "userEmail": "ada@gmail.com"
+    },
+    {
+      "id": "6488",
+      "userId": "568a",
+      "time": "10.11.2024, 21:48:09",
+      "title": "pierwsza",
+      "content": "afdasfasfdasf\nasfasdfasdfa\nbvxcbxcb\naffdsgfdgfsdg",
+      "userEmail": "tom@gmail.com"
+    },
+    {
+      "id": "d6cd",
+      "userId": "568a",
+      "time": "10.11.2024, 21:49:57",
+      "title": "druga",
+      "content": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "userEmail": "tom@gmail.com"
+    },
+    {
+      "id": "d40b",
+      "userId": "bcd3",
+      "time": "10.11.2024, 21:57:37",
+      "title": "fasdfsa",
+      "content": "dfasfsa",
+      "userEmail": "ola11@gmail.com"
     }
   ],
   "users": [
     {
-      "id": "1",
+      "id": "0b38",
       "email": "ada@gmail.com",
-      "hashedPassword": "$2a$10$wALgMyysuRMopf.IS1qccuE1o/MDZwNJrFL/xEguwE0ywlDdQXrXq"
+      "hashedPassword": "$2a$10$eKF5UlXvOQ4uFEybEXNt6e5lNKSq0Q4l6PL1MUDeXl71v2dFH4eQS"
     },
     {
-      "id": "2",
-      "email": "ola@gmail.com",
-      "hashedPassword": "$2a$10$ngigXORfJ8Njhq6ceSXMJOXW7KADSkbOid8ngjyIuS94rE7UPqV8O"
-    },
-    {
-      "id": "3",
-      "email": "tomek@gmail.com",
-      "hashedPassword": "$2a$10$iYWtwGX4bMLCmUdTZL9ZfOCHbM1V0LoypdYp2Hi0XLH8mrBYtlwWa"
-    },
-    {
-      "id": "4696",
-      "email": "tomek1@gmail.com",
-      "hashedPassword": "$2a$10$S/rdVuCEOUpBeL4iQoF26u8iwK4/yDPyNE8iRh7ieqNrVYny/IiH6"
-    },
-    {
-      "id": "f9a7",
-      "email": "ola1@gmail.com",
-      "hashedPassword": "$2a$10$nh2C5rO34TYVGQHoYyA7aOWJbmnBVVdAXhmH29bq5mb.pQYr4nfKK"
-    },
-    {
-      "id": "c20d",
-      "email": "ada@mail",
-      "hashedPassword": "$2a$10$CalBhPV7H9sTKF6S4e/4JOR/9SkYD/UXhfmaKYJoidR9wxD8Zpdlq"
-    },
-    {
-      "id": "f366",
-      "email": "ada1@gmail.com",
-      "hashedPassword": "$2a$10$.g6NeAlWikn7U/xnAtu8S./UAG3EoOJgQ4CxG.MHXvZlOwnntGXg6"
-    }
+      "id": "568a",
+      "email": "tom@gmail.com",
+      "hashedPassword": "$2a$10$W9CPaCYva4cu9kF3KgVJmOvuL8fA4MfO5gclIONDjZ0/3VezhuOL2"
+    }    
   ]
 }

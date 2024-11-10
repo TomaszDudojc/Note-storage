@@ -9,7 +9,11 @@ import Footer from "../Footer/Footer";
 import Home from "../Home/Home";
 
 function App() {
-  const { token, setToken } = useToken();  
+  const { token, setToken } = useToken();
+  const loggedUserEmailString = localStorage.getItem('loggedUserEmail');
+  const loggedUserEmail = JSON.parse(loggedUserEmailString);
+  const loggedUserIdString = localStorage.getItem('loggedUserId');  
+  const loggedUserId = JSON.parse(loggedUserIdString);  
   
   if(!token) {
     return (
@@ -25,7 +29,7 @@ function App() {
       <Header isLogged="true"/>          
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} /> 
+          <Route path="/" element={<Home currentUserId = {loggedUserId} currentUserEmail={loggedUserEmail}/>} /> 
           <Route path="/dashboard" element={<Dashboard />} />           
           <Route path="/preferences" element={<Preferences />} /> 
         </Routes>

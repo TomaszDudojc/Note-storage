@@ -4,15 +4,12 @@ import Note from "../Note/Note";
 import { getNotes } from '../../services/notes';
 import { deleteItem } from '../../services/notes';
 
-function Home() {  
+function Home(props) {  
   const [notes, setNotes] = useState([]);
-  const mounted = useRef(true); 
-  const loggedUserEmail = localStorage.getItem('loggedUserEmail');
-  const loggedUserIdString = localStorage.getItem('loggedUserId');  
-  const loggedUserId = JSON.parse(loggedUserIdString);
+  const mounted = useRef(true);
 
   const userNotes = notes.filter(function(item) {
-    return item.userId==loggedUserId;
+    return item.userId==props.currentUserId;
   });
   
 
@@ -36,11 +33,8 @@ function Home() {
 
   return (
     <div>        
-    <CreateArea userId={loggedUserId}/>
-    {userNotes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
-    || TYLKO ROBOCZO!: ||
-    <p>Logged user id: {loggedUserId}</p>
-    <p>Logged user email: {loggedUserEmail}</p>
+    <CreateArea userId={props.currentUserId} userEmail={props.currentUserEmail}/>
+    {userNotes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} userEmail={item.userEmail} onDelete={deleteNote} />)}
     </div>
   );
 }
