@@ -4,9 +4,14 @@ import Note from "../Note/Note";
 import { getNotes } from '../../services/notes';
 import { deleteItem } from '../../services/notes';
 
-function Home() {
-    const [notes, setNotes] = useState([]);
-    const mounted = useRef(true);  
+function Home(props) {  
+  const [notes, setNotes] = useState([]);
+  const mounted = useRef(true);
+
+  const userNotes = notes.filter(function(item) {
+    return item.userId==props.currentUserId;
+  });
+  
 
   useEffect(() => {
     mounted.current = true;    
@@ -19,17 +24,17 @@ function Home() {
           setNotes(items)
         }
       })
-      return () => mounted.current = false;
-  }, [alert, notes])
+      return () => mounted.current = false;      
+  }, [alert, notes])  
 
   function deleteNote(id) { 
-    deleteItem(id);    
+    deleteItem(id);   
   }
-  
+
   return (
-    <div>
-    <CreateArea /> 
-    {notes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} onDelete={deleteNote} />)}
+    <div>        
+    <CreateArea userId={props.currentUserId} userEmail={props.currentUserEmail}/>
+    {userNotes.map(item => <Note key={item.id} id={item.id} time={item.time} title={item.title} content={item.content} userEmail={item.userEmail} onDelete={deleteNote} />)}
     </div>
   );
 }

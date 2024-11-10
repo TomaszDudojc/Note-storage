@@ -1,18 +1,18 @@
 import React, { useState , useRef, useEffect} from "react";
 import { setItem } from '../../services/notes';
-
 import AddIcon from "@mui/icons-material/Add";
 import { Fab } from "@mui/material";
 import { Zoom } from "@mui/material";
 
-
-function CreateArea() {  
+function CreateArea(props) {  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState(""); 
   const [alert, setAlert] = useState(false);
   const now = new Date().toLocaleString();
   const [time, setTime] = useState(now); 
   const mounted = useRef(true);
+  const userId = props.userId;
+  const userEmail = props.userEmail;
 
   const [isExpanded, setExpanded] = useState(false);
 
@@ -33,9 +33,10 @@ function CreateArea() {
     }
   }, [alert])
   
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    setItem(time, title, content)
+    setItem(userId, time, title, content, userEmail)
       .then(() => {
         if(mounted.current) {       
           setTitle('');
@@ -62,9 +63,8 @@ function CreateArea() {
               <AddIcon />
             </Fab>
         </Zoom>
-          {/*<button type="submit">Add</button>*/}
       </form>
-      {alert && <h3 className="info"> Note added 🖋</h3>}
+      {alert && <h3 className="info"> Note added 🖋 </h3>}
     </div>        
   );
 }

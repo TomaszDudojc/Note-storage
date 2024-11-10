@@ -1,28 +1,64 @@
 {
   "notes": [
     {
-      "id": "97d4",
-      "time": "22.10.2024, 15:43:03",
-      "title": "3 note",
-      "content": "treść trzeciej notatki....."
+      "id": "455a",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:45:17",
+      "title": "note 1",
+      "content": "pierwsza notatka, aby sprawadzić działanie programu, może trochę nudna i przydługa, ale zawsze coś..",
+      "userEmail": "ada@gmail.com"
     },
     {
-      "id": "6fcd",
-      "time": "22.10.2024, 16:22:04",
-      "title": "7 note",
-      "content": "coś niecoś"
+      "id": "8d08",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:45:37",
+      "title": "druga ",
+      "content": "adfasfsafsadfsa",
+      "userEmail": "ada@gmail.com"
     },
     {
-      "id": "c204",
-      "time": "24.10.2024, 15:15:06",
-      "title": "home ",
-      "content": "ciekawy czy działa"
+      "id": "8cd6",
+      "userId": "0b38",
+      "time": "10.11.2024, 21:46:19",
+      "title": "4",
+      "content": "dfasf\nfasdfa\nasfdfas\ndfaasd",
+      "userEmail": "ada@gmail.com"
     },
     {
-      "id": "6da6",
-      "time": "24.10.2024, 17:48:43",
-      "title": "nowy styl",
-      "content": "wygląda na to że się udało"
+      "id": "6488",
+      "userId": "568a",
+      "time": "10.11.2024, 21:48:09",
+      "title": "pierwsza",
+      "content": "afdasfasfdasf\nasfasdfasdfa\nbvxcbxcb\naffdsgfdgfsdg",
+      "userEmail": "tom@gmail.com"
+    },
+    {
+      "id": "d6cd",
+      "userId": "568a",
+      "time": "10.11.2024, 21:49:57",
+      "title": "druga",
+      "content": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "userEmail": "tom@gmail.com"
+    },
+    {
+      "id": "d40b",
+      "userId": "bcd3",
+      "time": "10.11.2024, 21:57:37",
+      "title": "fasdfsa",
+      "content": "dfasfsa",
+      "userEmail": "ola11@gmail.com"
     }
+  ],
+  "users": [
+    {
+      "id": "0b38",
+      "email": "ada@gmail.com",
+      "hashedPassword": "$2a$10$eKF5UlXvOQ4uFEybEXNt6e5lNKSq0Q4l6PL1MUDeXl71v2dFH4eQS"
+    },
+    {
+      "id": "568a",
+      "email": "tom@gmail.com",
+      "hashedPassword": "$2a$10$W9CPaCYva4cu9kF3KgVJmOvuL8fA4MfO5gclIONDjZ0/3VezhuOL2"
+    }    
   ]
 }
