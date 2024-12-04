@@ -9,8 +9,7 @@ import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 async function loginUser(credentials) {
- //return fetch('http://localhost:8080/login', {
-  return fetch('http://159.89.107.222:8080/login', {
+ return fetch('http://localhost:8080/login', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
