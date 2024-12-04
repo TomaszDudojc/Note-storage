@@ -1,10 +1,12 @@
 export function getNotes() {
-    return fetch('http://localhost:3333/notes')
+    //return fetch('http://localhost:3333/notes')
+    return fetch('http://159.89.107.222:3333/notes')
       .then(data => data.json())
   }
 
 export function setItem(userId, time, title, content, userEmail) {
-    return fetch('http://localhost:3333/notes', {
+    //return fetch('http://localhost:3333/notes', {
+      return fetch('http://159.89.107.222:3333/notes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -15,7 +17,8 @@ export function setItem(userId, time, title, content, userEmail) {
   }
 
   export function deleteItem(id) {       
-    return fetch('http://localhost:3333/notes/'+id, {
+    //return fetch('http://localhost:3333/notes/'+id, {
+      return fetch('http://159.89.107.222:3333/notes/'+id, {
       method: 'DELETE'
     })
       .then(data => data.json())
